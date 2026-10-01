@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Om Nom Offline</title>
+    <link rel="icon" href="data:,"><!-- no favicon request: a 404 would be a console error on a plain static host -->
+    <!-- The canvas fills the window; the game keeps its 1080-wide portrait column itself (canvas Expand, CameraFit). -->
+    <style>
+      html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #B8773D; }
+      body { position: fixed; inset: 0; touch-action: none; -webkit-user-select: none; user-select: none; }
+      #unity-canvas { position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%;
+                      background: #B8773D; outline: none; }
+    </style>
+  </head>
+  <body>
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+    <script src="Build/webgl.loader.js"></script>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+      // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
+      // without the invalid call (removes "INVALID_ENUM: getInternalformatParameter" console warnings)
+      (function () {
+        if (!window.WebGL2RenderingContext) return;
+        var proto = WebGL2RenderingContext.prototype, query = proto.getInternalformatParameter;
+        proto.getInternalformatParameter = function (target, internalformat, pname) {
+          if (internalformat >= 0x8F94 && internalformat <= 0x8F9B) return new Int32Array(0);
+          return query.call(this, target, internalformat, pname);
+        };
+      })();
+      function fitFrame() {
+        var vv = window.visualViewport;
+        var w = Math.floor(vv ? vv.width : window.innerWidth);
+        var h = Math.floor(vv ? vv.height : window.innerHeight);
+        if (w <= 0 || h <= 0) return;
+        canvas.style.width = w + "px";
+        canvas.style.height = h + "px";
+      }
+      fitFrame();
+      window.addEventListener("resize", fitFrame);
+      window.addEventListener("orientationchange", fitFrame);
+      if (window.visualViewport) window.visualViewport.addEventListener("resize", fitFrame);
+      createUnityInstance(canvas, {
+        arguments: [],
+        dataUrl: "Build/webgl.data.unityweb",
+        frameworkUrl: "Build/webgl.framework.js.unityweb",
+        codeUrl: "Build/webgl.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        // save.json lives in persistentDataPath (IndexedDB): synced by the engine after file writes
+        autoSyncPersistentDataPath: true,
+        companyName: "Studio",
+        productName: "Om Nom Offline",
+        productVersion: "0.1.0",
+        devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+      }).then(function (unityInstance) {
+        fitFrame();
+        // test API on the page (Omnom.Shell.WebProbe + Plugins/WebGL/OmnomProbe.jslib), synchronous
+        window.__omnom = {
+          ready: function () { unityInstance.SendMessage("WebProbe", "Pull", ""); return window.__omnomReady === true; },
+          state: function () { unityInstance.SendMessage("WebProbe", "Pull", ""); return JSON.parse(window.__omnomState || "{}"); },
+          act: function (action, payload) {
+            var p = payload == null ? null : (typeof payload === "string" ? payload : JSON.stringify(payload));
+            unityInstance.SendMessage("WebProbe", "Act", JSON.stringify({ action: action, payload: p }));
+            return JSON.parse(window.__omnomLastAct || "{}");
+          },
+        };
+      }).catch(function (message) { console.error(message); });
+    </script>
+  </body>
+</html>
