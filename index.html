@@ -15,7 +15,7 @@
   </head>
   <body>
     <canvas id="unity-canvas" tabindex="-1"></canvas>
-    <script src="Build/web-hook-slide-20261003-1130.loader.js"></script>
+    <script src="Build/web-tower-zoom-20261003-1217.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
@@ -42,9 +42,9 @@
       if (window.visualViewport) window.visualViewport.addEventListener("resize", fitFrame);
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-hook-slide-20261003-1130.data.unityweb",
-        frameworkUrl: "Build/web-hook-slide-20261003-1130.framework.js.unityweb",
-        codeUrl: "Build/web-hook-slide-20261003-1130.wasm.unityweb",
+        dataUrl: "Build/web-tower-zoom-20261003-1217.data.unityweb",
+        frameworkUrl: "Build/web-tower-zoom-20261003-1217.framework.js.unityweb",
+        codeUrl: "Build/web-tower-zoom-20261003-1217.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // save.json lives in persistentDataPath (IndexedDB): synced by the engine after file writes
         autoSyncPersistentDataPath: true,
