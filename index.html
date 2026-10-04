@@ -46,7 +46,7 @@
       <div class="bar"><div class="fill"></div><div class="candy"></div></div>
       <div class="msg">Could not start the game. Please reload the page.</div>
     </div>
-    <script src="Build/web-final-20261004-1203.loader.js"></script>
+    <script src="Build/web-final-20261004-doodle.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
@@ -103,9 +103,9 @@
       requestAnimationFrame(paintLoader);
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-final-20261004-1203.data.unityweb",
-        frameworkUrl: "Build/web-final-20261004-1203.framework.js.unityweb",
-        codeUrl: "Build/web-final-20261004-1203.wasm.unityweb",
+        dataUrl: "Build/web-final-20261004-doodle.data.unityweb",
+        frameworkUrl: "Build/web-final-20261004-doodle.framework.js.unityweb",
+        codeUrl: "Build/web-final-20261004-doodle.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // save.json lives in persistentDataPath (IndexedDB): synced by the engine after file writes
         autoSyncPersistentDataPath: true,
