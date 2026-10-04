@@ -15,7 +15,7 @@
   </head>
   <body>
     <canvas id="unity-canvas" tabindex="-1"></canvas>
-    <script src="Build/web-all7-20261004-0221.loader.js"></script>
+    <script src="Build/web-all8-20261004-0309.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
@@ -42,9 +42,9 @@
       if (window.visualViewport) window.visualViewport.addEventListener("resize", fitFrame);
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-all7-20261004-0221.data.unityweb",
-        frameworkUrl: "Build/web-all7-20261004-0221.framework.js.unityweb",
-        codeUrl: "Build/web-all7-20261004-0221.wasm.unityweb",
+        dataUrl: "Build/web-all8-20261004-0309.data.unityweb",
+        frameworkUrl: "Build/web-all8-20261004-0309.framework.js.unityweb",
+        codeUrl: "Build/web-all8-20261004-0309.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // save.json lives in persistentDataPath (IndexedDB): synced by the engine after file writes
         autoSyncPersistentDataPath: true,
