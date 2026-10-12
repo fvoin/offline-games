@@ -39,7 +39,7 @@
       <div class="bar"><div class="fill"></div><div class="candy"></div></div>
       <div class="msg">Could not start the game. Please reload the page.</div>
     </div>
-    <script src="Build/web-offline-games-20261012-all14.loader.js"></script>
+    <script src="Build/web-offline-games-20261012-split2.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
@@ -96,10 +96,17 @@
       requestAnimationFrame(paintLoader);
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-offline-games-20261012-all14.data.unityweb",
-        frameworkUrl: "Build/web-offline-games-20261012-all14.framework.js.unityweb",
-        codeUrl: "Build/web-offline-games-20261012-all14.wasm.unityweb",
+        dataUrl: "Build/web-offline-games-20261012-split2.data.unityweb",
+        frameworkUrl: "Build/web-offline-games-20261012-split2.framework.js.unityweb",
+        codeUrl: "Build/web-offline-games-20261012-split2.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
+        // D-383: a game pack (StreamingAssets/packs/<name>-<content hash>.bundle) never changes under its name: once downloaded it is read from the browser's cache
+        // without asking the server, so a game entered once opens again without network; the data file is checked with the server as before
+        cacheControl: function (url) {
+          if (/\/packs\/[a-z0-9_]+-[0-9a-f]{16}\.bundle$/.test(url)) return "immutable";
+          if (url.match(/\.data/) || url.match(/\.bundle/)) return "must-revalidate";
+          return "no-store";
+        },
         // save.json lives in persistentDataPath (IndexedDB): synced by the engine after file writes
         autoSyncPersistentDataPath: true,
         companyName: "Studio",
