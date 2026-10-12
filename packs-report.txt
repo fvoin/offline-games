@@ -1,18 +1,19 @@
 blocks-c73e7ff7e958fa9d.bundle	2963998	gamekit
-bump-ce00363d0fb2036c.bundle	3696891	gamekit
-clash-1f54b250e5ca943d.bundle	8125921	gamekit
+bump-5ba986f89e0f4427.bundle	3705371	gamekit
+clash-0764c4dbac7b8510.bundle	8109542	gamekit
 doodle-8db4f21ff5d3e936.bundle	5240999	gamekit,omkit
-drop-9a01b52a05ba743f.bundle	1221322	gamekit
-gamekit-3729715134ede851.bundle	3664819	
+drop-23bac5bf6cc5e329.bundle	1218788	gamekit
+gamekit-eea132b6f07c51cc.bundle	3675041	
 gobble-a23478c2468e278d.bundle	1916916	gamekit
-hockey-3fd0678b1c7b846a.bundle	1101973	gamekit
+hockey-f6f984be6c1a4c09.bundle	1101884	gamekit
 hook-e2c146f2bba21d82.bundle	30425190	gamekit,omkit
-hop-f042bce4086eb1f4.bundle	4161884	gamekit
-merge-650a18f086dcf559.bundle	2589488	gamekit
-moto-748b7934e1665d57.bundle	5083625	gamekit
+hop-c89c7e9f791eaa73.bundle	4153809	gamekit
+merge-7dc3e7bef6c47d13.bundle	2584783	gamekit
+moto-e63f8468b6034c17.bundle	5081917	gamekit
 omkit-a615aab960938f2f.bundle	1958876	gamekit
-queens-e1e6537e69a71f1a.bundle	478307	gamekit
-race-b1725a8e0d5530de.bundle	12914651	gamekit
+pin-4dc5cfa9d189d256.bundle	2418813	gamekit
+queens-3524d8660ca02243.bundle	519445	gamekit
+race-c825059c0dfe9dc0.bundle	12918715	gamekit
 rain-b7cfb45baa72a2ef.bundle	3654327	gamekit,omkit
 slide-a8a207502b0680ff.bundle	8500959	gamekit,omkit
 sort-c00672d8cefc30fa.bundle	12605276	gamekit
@@ -22,7 +23,7 @@ tower-20bddd367a6618c1.bundle	2569171	gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_fridge.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_hub.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
-gamekit assets: 293
+gamekit assets: 297
   gamekit Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shared.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2
@@ -258,9 +259,10 @@ gamekit assets: 293
   gamekit Assets/Game/Audio/Sfx/bubble_catch.wav
   gamekit Assets/Game/Audio/Sfx/bubble_pop.wav
   gamekit Assets/Game/Audio/Sfx/cake_land.wav
+  gamekit Assets/Game/Audio/Sfx/clash_tink_0.wav
   gamekit Assets/Game/Audio/Sfx/countdown.wav
-  gamekit Assets/Game/Audio/Sfx/crowd_joy.wav
   gamekit Assets/Game/Audio/Sfx/drop_chime.wav
+  gamekit Assets/Game/Audio/Sfx/drop_tock.wav
   gamekit Assets/Game/Audio/Sfx/eat.wav
   gamekit Assets/Game/Audio/Sfx/eat_chain.wav
   gamekit Assets/Game/Audio/Sfx/go.wav
@@ -274,6 +276,9 @@ gamekit assets: 293
   gamekit Assets/Game/Audio/Sfx/hook_miss.wav
   gamekit Assets/Game/Audio/Sfx/hook_thud.wav
   gamekit Assets/Game/Audio/Sfx/hook_whoosh.wav
+  gamekit Assets/Game/Audio/Sfx/hop_squeak.wav
+  gamekit Assets/Game/Audio/Sfx/hop_squeak_s.wav
+  gamekit Assets/Game/Audio/Sfx/merge_ding.wav
   gamekit Assets/Game/Audio/Sfx/milestone.wav
   gamekit Assets/Game/Audio/Sfx/pick.wav
   gamekit Assets/Game/Audio/Sfx/puck_hit.wav
@@ -394,6 +399,7 @@ omkit assets: 56
   copy of the shell in hop: Assets/Game/HubArt/covers/cover_hop_tall.png
   copy of the shell in merge: Assets/Game/HubArt/covers/cover_merge_tall.png
   copy of the shell in moto: Assets/Game/HubArt/covers/cover_moto_tall.png
+  copy of the shell in pin: Assets/Game/HubArt/covers/cover_pin_tall.png
   copy of the shell in queens: Assets/Game/HubArt/covers/cover_queens_tall.png
   copy of the shell in race: Assets/Game/HubArt/covers/cover_race_tall.png
   copy of the shell in rain: Assets/Game/HubArt/covers/cover_rain_tall.png
