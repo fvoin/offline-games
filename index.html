@@ -39,7 +39,7 @@
       <div class="bar"><div class="fill"></div><div class="candy"></div></div>
       <div class="msg">Could not start the game. Please reload the page.</div>
     </div>
-    <script src="Build/web-offline-games-20261012-all15.loader.js"></script>
+    <script src="Build/web-offline-games-20261013-all16.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
@@ -96,9 +96,9 @@
       requestAnimationFrame(paintLoader);
       createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-offline-games-20261012-all15.data.unityweb",
-        frameworkUrl: "Build/web-offline-games-20261012-all15.framework.js.unityweb",
-        codeUrl: "Build/web-offline-games-20261012-all15.wasm.unityweb",
+        dataUrl: "Build/web-offline-games-20261013-all16.data.unityweb",
+        frameworkUrl: "Build/web-offline-games-20261013-all16.framework.js.unityweb",
+        codeUrl: "Build/web-offline-games-20261013-all16.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // D-383: a game pack (StreamingAssets/packs/<name>-<content hash>.bundle) never changes under its name: once downloaded it is read from the browser's cache
         // without asking the server, so a game entered once opens again without network; the data file is checked with the server as before

@@ -1,27 +1,27 @@
-blocks-6ef5e4449bc2b5f3.bundle	2963923	gamekit
-bump-be479e636c10f466.bundle	3696892	gamekit
-clash-f128150b9620f281.bundle	8125588	gamekit
-doodle-c88b38660e7c69e8.bundle	5255701	gamekit,omkit
-drop-996695e29eb1e3b6.bundle	1220949	gamekit
-gamekit-2ec46195fdfe9a7e.bundle	3661313	
-gobble-caedf9d8c3f439b8.bundle	1917177	gamekit
-hockey-01b71aadcb59e3fa.bundle	1102007	gamekit
-hook-fa82e6bc1ba51305.bundle	31334062	gamekit,omkit
-hop-232b8c9f670e8c37.bundle	3709525	gamekit
-merge-2793d157294a0e6e.bundle	2589514	gamekit
-moto-a582b5eaffd20a17.bundle	5083722	gamekit
+blocks-c73e7ff7e958fa9d.bundle	2963998	gamekit
+bump-ce00363d0fb2036c.bundle	3696891	gamekit
+clash-1f54b250e5ca943d.bundle	8125921	gamekit
+doodle-7b994ba5c27fa9fd.bundle	5255716	gamekit,omkit
+drop-9a01b52a05ba743f.bundle	1221322	gamekit
+gamekit-3729715134ede851.bundle	3664819	
+gobble-2e241461dc45f783.bundle	1916256	gamekit
+hockey-3fd0678b1c7b846a.bundle	1101973	gamekit
+hook-aef605133c0cb825.bundle	30424701	gamekit,omkit
+hop-6484e9020137f862.bundle	3709560	gamekit
+merge-650a18f086dcf559.bundle	2589488	gamekit
+moto-a48fa31f1e8ee96a.bundle	5083775	gamekit
 omkit-a99e43e83d9a9669.bundle	2003024	gamekit
-race-81d18d90ae707158.bundle	13083999	gamekit
-rain-ece31ba7d719e1f6.bundle	3654475	gamekit,omkit
-slide-d55b3cf36046fa3b.bundle	8469473	gamekit,omkit
-sort-a018e323fa5ab6e3.bundle	12605282	gamekit
+race-ca0ea329b16015e1.bundle	13084265	gamekit
+rain-b7cfb45baa72a2ef.bundle	3654327	gamekit,omkit
+slide-ae33ae6f2952bf34.bundle	8469722	gamekit,omkit
+sort-c00672d8cefc30fa.bundle	12605276	gamekit
 squish-401037021b1fccf2.bundle	2551491	gamekit,omkit
-tenbox-70277e3c69a249f6.bundle	658700	gamekit
-tower-7ee13f22beed034c.bundle	2569051	gamekit
+tenbox-9ff9521346a5ff8b.bundle	658744	gamekit
+tower-20bddd367a6618c1.bundle	2569171	gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_fridge.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_hub.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
-gamekit assets: 292
+gamekit assets: 293
   gamekit Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shared.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2
@@ -305,6 +305,7 @@ gamekit assets: 292
   gamekit Assets/Game/Fonts/Nunito-Black SDF H1 White Outline.mat
   gamekit Assets/Game/Fonts/Nunito-Black SDF.asset
   gamekit Assets/Game/Fonts/Nunito-ExtraBold SDF.asset
+  gamekit Assets/Game/HubArt/ui/card_mask_9slice.png
   gamekit Assets/Game/Prefabs/UI/ProgressBar.prefab
   gamekit Assets/Game/Rope/View/Materials/RopeSegments.mat
   gamekit Assets/Game/Rope/View/Shaders/RopeSegments.shader
