@@ -1,30 +1,30 @@
-blocks-ca596db93b8393d3.bundle	1119196	gamekit
-bump-b6c28dcff687157e.bundle	3439655	gamekit
-clash-adb91fb83eb4ee71.bundle	7242022	gamekit
-doodle-e27356f6d66420f6.bundle	1945278	gamekit,omkit
-drop-bcb5dc08bf725ea7.bundle	1044401	gamekit
-duel-1648465c72280a74.bundle	6206278	gamekit
-gamekit-71974bdb4d5ef1e7.bundle	3533557	
-gobble-839a572061cc930d.bundle	3282585	gamekit
-hockey-173b9c222d2afbbf.bundle	1087399	gamekit
-hook-0e399be471f1ef71.bundle	8232310	gamekit,omkit
-hop-3a780cfe278970fe.bundle	5473360	gamekit
-merge-43301b9e54d5d90e.bundle	2533276	gamekit
-moto-1907b64653beb290.bundle	5428591	gamekit
+blocks-c753abfd9a7472c0.bundle	1119407	gamekit
+bump-778bc47854050569.bundle	3440720	gamekit
+clash-a631673fbce89e31.bundle	8539124	gamekit
+doodle-a0aab8f072829134.bundle	1945494	gamekit,omkit
+drop-07aea6c6cbe56069.bundle	1044620	gamekit
+duel-c6629c78b6fff59c.bundle	6207570	gamekit
+gamekit-93a7890a3925ff5d.bundle	3552517	
+gobble-1a886b2d0a7e6b77.bundle	3282833	gamekit
+hockey-1c10156adfcb42d8.bundle	1088485	gamekit
+hook-c0c7652c83c62003.bundle	8232543	gamekit,omkit
+hop-1c45112afb7e409f.bundle	5473626	gamekit
+merge-1ee86ac9fb8c6672.bundle	2533495	gamekit
+moto-74f08fa9925e7ba0.bundle	5428788	gamekit
 omkit-5c3fdaca393b127c.bundle	2152698	gamekit
-paint-9bf2b43060b6c101.bundle	2040642	gamekit
-pin-601140560b688e00.bundle	3279736	gamekit
-queens-232ffb5c6db128dd.bundle	1504702	gamekit
-race-5e0a5fa1a4aeeeaa.bundle	10977912	gamekit
-rain-a61cf481c776748d.bundle	1941443	gamekit,omkit
-slide-8d1d3f7f342ad3b6.bundle	2095967	gamekit,omkit
-sort-def92868f9cd2c63.bundle	12686186	gamekit
+paint-5f1636e23cfb3409.bundle	2040851	gamekit
+pin-c3aebf6d6e7ff7f6.bundle	3279964	gamekit
+queens-d984ef64802b599e.bundle	1504912	gamekit
+race-55fe24260fd3b8fd.bundle	10978518	gamekit
+rain-6fd952330f1c570e.bundle	1941403	gamekit,omkit
+slide-f299f4afc6c2be8e.bundle	2096363	gamekit,omkit
+sort-2a623d8221639429.bundle	12686478	gamekit
 spree-a715e79c85c119e1.bundle	10593002	gamekit,omkit
-tenbox-b33e8680f60007f3.bundle	762932	gamekit
-tower-2c2a1269a8f12edd.bundle	1998392	gamekit
+tenbox-6cb6254e295ce1b8.bundle	763175	gamekit
+tower-f3c08850042470d6.bundle	1998593	gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in doodle+gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in spree
-gamekit assets: 291
+gamekit assets: 295
   gamekit Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shared.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2
@@ -251,6 +251,10 @@ gamekit assets: 291
   gamekit Assets/Game/Art/Shell/UI/poster_chevron.png
   gamekit Assets/Game/Art/Shell/UI/poster_cross.png
   gamekit Assets/Game/Art/Shell/UI/poster_play.png
+  gamekit Assets/Game/Art/Shell/UI/seg_icon_one.png
+  gamekit Assets/Game/Art/Shell/UI/seg_icon_two.png
+  gamekit Assets/Game/Art/Shell/UI/seg_pill_normal.png
+  gamekit Assets/Game/Art/Shell/UI/seg_pill_selected.png
   gamekit Assets/Game/Art/Shell/UI/star_big_empty.png
   gamekit Assets/Game/Art/Shell/UI/star_big_full.png
   gamekit Assets/Game/Art/Shell/UI/star_empty.png
