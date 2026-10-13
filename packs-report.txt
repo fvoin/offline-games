@@ -3,7 +3,7 @@ bump-5ba986f89e0f4427.bundle	3705371	gamekit
 clash-6b6eae98d38f4ceb.bundle	8305590	gamekit
 doodle-e4db87e896432f43.bundle	5241655	gamekit,omkit
 drop-23bac5bf6cc5e329.bundle	1218788	gamekit
-gamekit-eea132b6f07c51cc.bundle	3675041	
+gamekit-e374e58e96f3589d.bundle	3674972	
 gobble-a23478c2468e278d.bundle	1916916	gamekit
 hockey-f6f984be6c1a4c09.bundle	1101884	gamekit
 hook-1a7f1f929f608ce9.bundle	30425364	gamekit,omkit
@@ -16,7 +16,7 @@ pin-4dc5cfa9d189d256.bundle	2418813	gamekit
 queens-5d17c12dd18479b0.bundle	627391	gamekit
 race-c825059c0dfe9dc0.bundle	12918715	gamekit
 rain-a5197071fef6eb68.bundle	3654386	gamekit,omkit
-slide-e84a41eac988c0cd.bundle	8501055	gamekit,omkit
+slide-535c4149f6dca541.bundle	8516724	gamekit,omkit
 sort-d078751198aef904.bundle	12695579	gamekit
 squish-eac3932edb23ac1c.bundle	2595384	gamekit,omkit
 tenbox-9ff9521346a5ff8b.bundle	658744	gamekit
