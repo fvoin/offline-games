@@ -1,35 +1,38 @@
 blocks-c73e7ff7e958fa9d.bundle	2963998	gamekit
 bump-5ba986f89e0f4427.bundle	3705371	gamekit
-clash-6b6eae98d38f4ceb.bundle	8305590	gamekit
+clash-bbe310c719b4cd39.bundle	8307016	gamekit
 doodle-e4db87e896432f43.bundle	5241655	gamekit,omkit
-drop-23bac5bf6cc5e329.bundle	1218788	gamekit
-gamekit-e374e58e96f3589d.bundle	3674972	
+drop-a71c8f1069b80fb5.bundle	1248867	gamekit
+duel-d665fb279405f245.bundle	4395107	gamekit
+gamekit-464f403e92950f07.bundle	4471363	
 gobble-a23478c2468e278d.bundle	1916916	gamekit
 hockey-f6f984be6c1a4c09.bundle	1101884	gamekit
 hook-1a7f1f929f608ce9.bundle	30425364	gamekit,omkit
-hop-c89c7e9f791eaa73.bundle	4153809	gamekit
-merge-7dc3e7bef6c47d13.bundle	2584783	gamekit
+hop-f042bce4086eb1f4.bundle	4161884	gamekit
+merge-650a18f086dcf559.bundle	2589488	gamekit
 moto-e63f8468b6034c17.bundle	5081917	gamekit
-omkit-ffa5df4badca9d33.bundle	1958744	gamekit
+omkit-8aabd4a0c95ee206.bundle	2277483	gamekit
 paint-f9774a50f5db23b1.bundle	4263334	gamekit
-pin-4dc5cfa9d189d256.bundle	2418813	gamekit
+pin-cf60afe8a2820348.bundle	2439256	gamekit
 queens-5d17c12dd18479b0.bundle	627391	gamekit
 race-c825059c0dfe9dc0.bundle	12918715	gamekit
 rain-a5197071fef6eb68.bundle	3654386	gamekit,omkit
 slide-535c4149f6dca541.bundle	8516724	gamekit,omkit
 sort-d078751198aef904.bundle	12695579	gamekit
-squish-eac3932edb23ac1c.bundle	2595384	gamekit,omkit
-tenbox-9ff9521346a5ff8b.bundle	658744	gamekit
+spree-d2ca71e7477dd89f.bundle	6979042	gamekit,omkit
+squish-2980765e3c04460b.bundle	1486442	gamekit,omkit
+tenbox-635c716ab20cfc86.bundle	684350	gamekit
 tower-20bddd367a6618c1.bundle	2569171	gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2 is also used by the shell: its texture is in the player and in bump+gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_fridge.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_hub.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in doodle+gamekit
-note: atlas Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
-gamekit assets: 297
+note: atlas Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in omkit+squish
+gamekit assets: 316
   gamekit Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shared.spriteatlasv2
   gamekit Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2
+  gamekit Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2
   gamekit Assets/Game/Art/Bump/Om/omnom_dizzy.png
   gamekit Assets/Game/Art/Bump/Om/omnom_flung.png
   gamekit Assets/Game/Art/Bump/Om/omnom_joy.png
@@ -211,7 +214,28 @@ gamekit assets: 297
   gamekit Assets/Game/Art/Bump/star_hit_play_0.png
   gamekit Assets/Game/Art/Bump/star_hit_play_1.png
   gamekit Assets/Game/Art/Bump/star_hit_play_2.png
+  gamekit Assets/Game/Art/Platform/fx/bulb_glow.png
+  gamekit Assets/Game/Art/Platform/fx/contact_shadow.png
+  gamekit Assets/Game/Art/Platform/fx/edge_shadow.png
   gamekit Assets/Game/Art/Platform/fx/mask_white.png
+  gamekit Assets/Game/Art/Platform/icons/candy.png
+  gamekit Assets/Game/Art/Platform/icons/home.png
+  gamekit Assets/Game/Art/Platform/icons/pause.png
+  gamekit Assets/Game/Art/Platform/icons/play_white.png
+  gamekit Assets/Game/Art/Platform/icons/replay.png
+  gamekit Assets/Game/Art/Platform/icons/replay_white.png
+  gamekit Assets/Game/Art/Platform/icons/star.png
+  gamekit Assets/Game/Art/Platform/icons/star_empty.png
+  gamekit Assets/Game/Art/Platform/ui/btn_primary.png
+  gamekit Assets/Game/Art/Platform/ui/btn_primary_disabled.png
+  gamekit Assets/Game/Art/Platform/ui/btn_primary_pressed.png
+  gamekit Assets/Game/Art/Platform/ui/btn_round.png
+  gamekit Assets/Game/Art/Platform/ui/btn_round_pressed.png
+  gamekit Assets/Game/Art/Platform/ui/btn_secondary.png
+  gamekit Assets/Game/Art/Platform/ui/btn_secondary_pressed.png
+  gamekit Assets/Game/Art/Platform/ui/label_plate.png
+  gamekit Assets/Game/Art/Platform/ui/panel_cardboard.png
+  gamekit Assets/Game/Art/Platform/ui/ribbon.png
   gamekit Assets/Game/Art/Shared/candy.png
   gamekit Assets/Game/Art/Shared/fx/candy_shard_1.png
   gamekit Assets/Game/Art/Shared/fx/candy_shard_2.png
@@ -262,10 +286,8 @@ gamekit assets: 297
   gamekit Assets/Game/Audio/Sfx/bubble_catch.wav
   gamekit Assets/Game/Audio/Sfx/bubble_pop.wav
   gamekit Assets/Game/Audio/Sfx/cake_land.wav
-  gamekit Assets/Game/Audio/Sfx/clash_tink_0.wav
   gamekit Assets/Game/Audio/Sfx/countdown.wav
   gamekit Assets/Game/Audio/Sfx/drop_chime.wav
-  gamekit Assets/Game/Audio/Sfx/drop_tock.wav
   gamekit Assets/Game/Audio/Sfx/eat.wav
   gamekit Assets/Game/Audio/Sfx/eat_chain.wav
   gamekit Assets/Game/Audio/Sfx/go.wav
@@ -279,9 +301,6 @@ gamekit assets: 297
   gamekit Assets/Game/Audio/Sfx/hook_miss.wav
   gamekit Assets/Game/Audio/Sfx/hook_thud.wav
   gamekit Assets/Game/Audio/Sfx/hook_whoosh.wav
-  gamekit Assets/Game/Audio/Sfx/hop_squeak.wav
-  gamekit Assets/Game/Audio/Sfx/hop_squeak_s.wav
-  gamekit Assets/Game/Audio/Sfx/merge_ding.wav
   gamekit Assets/Game/Audio/Sfx/milestone.wav
   gamekit Assets/Game/Audio/Sfx/pick.wav
   gamekit Assets/Game/Audio/Sfx/puck_hit.wav
@@ -320,13 +339,17 @@ gamekit assets: 297
   gamekit Assets/Game/Rope/View/Shaders/RopeSegments.shader
   gamekit Assets/Game/Shell/Celebrate/celebrate_atlas.png
   gamekit Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+  gamekit Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
   gamekit Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat
   gamekit Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat
+  gamekit Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Lit-Default.shader
   gamekit Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Mask.shader
   gamekit Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Unlit-Default.shader
-omkit assets: 56
+omkit assets: 147
   omkit Assets/Game/Art/Atlases/atlas_doodle.spriteatlasv2
   omkit Assets/Game/Art/Atlases/atlas_omnom.spriteatlasv2
+  omkit Assets/Game/Art/Atlases/atlas_squish.spriteatlasv2
+  omkit Assets/Game/Art/Atlases/atlas_squish_packed.spriteatlasv2
   omkit Assets/Game/Art/Doodle/crumb_1.png
   omkit Assets/Game/Art/Doodle/crumb_2.png
   omkit Assets/Game/Art/Doodle/crumb_3.png
@@ -373,12 +396,101 @@ omkit assets: 56
   omkit Assets/Game/Art/OmNom/Frames/wide_pupils_l.png
   omkit Assets/Game/Art/OmNom/Frames/wide_pupils_r.png
   omkit Assets/Game/Art/OmNom/Frames/yuck.png
+  omkit Assets/Game/Art/Squish/box.png
+  omkit Assets/Game/Art/Squish/box_lid.png
+  omkit Assets/Game/Art/Squish/fx/crack_1.png
+  omkit Assets/Game/Art/Squish/fx/crack_2.png
+  omkit Assets/Game/Art/Squish/fx/crack_3.png
+  omkit Assets/Game/Art/Squish/fx/crack_4.png
+  omkit Assets/Game/Art/Squish/fx/drip_0.png
+  omkit Assets/Game/Art/Squish/fx/drip_1.png
+  omkit Assets/Game/Art/Squish/fx/drip_2.png
+  omkit Assets/Game/Art/Squish/fx/drop_0.png
+  omkit Assets/Game/Art/Squish/fx/drop_1.png
+  omkit Assets/Game/Art/Squish/fx/drop_2.png
+  omkit Assets/Game/Art/Squish/fx/mallow_strand.png
+  omkit Assets/Game/Art/Squish/fx/powder_puff.png
+  omkit Assets/Game/Art/Squish/fx/shadow_soft.png
+  omkit Assets/Game/Art/Squish/fx/splat_0.png
+  omkit Assets/Game/Art/Squish/fx/splat_1.png
+  omkit Assets/Game/Art/Squish/fx/splat_2.png
+  omkit Assets/Game/Art/Squish/icons/icon_bubble_berry.png
+  omkit Assets/Game/Art/Squish/icons/icon_bubble_dome.png
+  omkit Assets/Game/Art/Squish/icons/icon_bubble_drop.png
+  omkit Assets/Game/Art/Squish/icons/icon_candy_disc.png
+  omkit Assets/Game/Art/Squish/icons/icon_candy_heart.png
+  omkit Assets/Game/Art/Squish/icons/icon_candy_star.png
+  omkit Assets/Game/Art/Squish/icons/icon_gummy_bear.png
+  omkit Assets/Game/Art/Squish/icons/icon_gummy_heart.png
+  omkit Assets/Game/Art/Squish/icons/icon_gummy_worm.png
+  omkit Assets/Game/Art/Squish/icons/icon_mallow_cloud.png
+  omkit Assets/Game/Art/Squish/icons/icon_mallow_cube.png
+  omkit Assets/Game/Art/Squish/icons/icon_mallow_pillow.png
+  omkit Assets/Game/Art/Squish/plate.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_0.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_1.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_2.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_3.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_4.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_5.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_6.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_7.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_8.png
+  omkit Assets/Game/Art/Squish/shards/candy_disc_9.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_0.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_1.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_2.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_3.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_4.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_5.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_6.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_7.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_8.png
+  omkit Assets/Game/Art/Squish/shards/candy_heart_9.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_0.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_1.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_2.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_3.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_4.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_5.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_6.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_7.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_8.png
+  omkit Assets/Game/Art/Squish/shards/candy_star_9.png
+  omkit Assets/Game/Audio/Sfx/doodle_dance.wav
+  omkit Assets/Game/Audio/Sfx/doodle_slurp.wav
   omkit Assets/Game/Audio/Sfx/draw.wav
   omkit Assets/Game/Audio/Sfx/rain_plip_0.wav
   omkit Assets/Game/Audio/Sfx/rain_plip_2.wav
   omkit Assets/Game/Audio/Sfx/rain_plip_3.wav
   omkit Assets/Game/Audio/Sfx/rain_plip_4.wav
   omkit Assets/Game/Audio/Sfx/squish_belly.wav
+  omkit Assets/Game/Audio/Sfx/squish_bite_0.wav
+  omkit Assets/Game/Audio/Sfx/squish_bite_1.wav
+  omkit Assets/Game/Audio/Sfx/squish_brew.wav
+  omkit Assets/Game/Audio/Sfx/squish_bubble_press.wav
+  omkit Assets/Game/Audio/Sfx/squish_bubble_wobble.wav
+  omkit Assets/Game/Audio/Sfx/squish_burst.wav
+  omkit Assets/Game/Audio/Sfx/squish_crunch.wav
+  omkit Assets/Game/Audio/Sfx/squish_gummy_press.wav
+  omkit Assets/Game/Audio/Sfx/squish_hop.wav
+  omkit Assets/Game/Audio/Sfx/squish_knock_0.wav
+  omkit Assets/Game/Audio/Sfx/squish_knock_1.wav
+  omkit Assets/Game/Audio/Sfx/squish_knock_2.wav
+  omkit Assets/Game/Audio/Sfx/squish_knock_3.wav
+  omkit Assets/Game/Audio/Sfx/squish_knock_4.wav
+  omkit Assets/Game/Audio/Sfx/squish_mallow_press_1.wav
+  omkit Assets/Game/Audio/Sfx/squish_mallow_press_2.wav
+  omkit Assets/Game/Audio/Sfx/squish_mallow_stretch.wav
+  omkit Assets/Game/Audio/Sfx/squish_plop_1.wav
+  omkit Assets/Game/Audio/Sfx/squish_plop_2.wav
+  omkit Assets/Game/Audio/Sfx/squish_shatter.wav
+  omkit Assets/Game/Audio/Sfx/squish_shatter_1.wav
+  omkit Assets/Game/Audio/Sfx/squish_shatter_2.wav
+  omkit Assets/Game/Audio/Sfx/squish_snap.wav
+  omkit Assets/Game/Audio/Sfx/squish_stretch_0.wav
+  omkit Assets/Game/Audio/Sfx/squish_tear.wav
+  omkit Assets/Game/Audio/Sfx/squish_yum.wav
   omkit Assets/Game/Data/OmNomFrames.asset
   omkit Assets/Game/Prefabs/Character/OmNomView.prefab
   copy of the shell in blocks: Assets/Game/HubArt/covers/cover_blocks_tall.png
@@ -396,6 +508,7 @@ omkit assets: 56
   copy of the shell in doodle: Assets/Games/Doodle/Shaders/DoodleSlab.shader
   copy of the shell in doodle: Assets/Games/Doodle/Shaders/DoodleStamp.shader
   copy of the shell in drop: Assets/Game/HubArt/covers/cover_drop_tall.png
+  copy of the shell in duel: Assets/Game/HubArt/covers/cover_duel_tall.png
   copy of the shell in gobble: Assets/Game/HubArt/covers/cover_gobble_tall.png
   copy of the shell in hockey: Assets/Game/HubArt/covers/cover_hockey_tall.png
   copy of the shell in hook: Assets/Game/HubArt/covers/cover_hook_tall.png
@@ -416,9 +529,6 @@ omkit assets: 56
   copy of the shell in squish: Assets/Game/Art/Platform/fridge/pal_licorice.png
   copy of the shell in squish: Assets/Game/Art/Platform/fridge/pal_mint.png
   copy of the shell in squish: Assets/Game/Art/Platform/fridge/pal_strawberry.png
-  copy of the shell in squish: Assets/Game/Art/Platform/ui/btn_round.png
-  copy of the shell in squish: Assets/Game/Art/Platform/ui/btn_round_pressed.png
-  copy of the shell in squish: Assets/Game/Art/Platform/ui/panel_cardboard.png
   copy of the shell in squish: Assets/Game/Prefabs/UI/RoundButton.prefab
   copy of the shell in tenbox: Assets/Game/HubArt/covers/cover_tenbox_tall.png
   copy of the shell in tower: Assets/Game/HubArt/covers/cover_tower_tall.png
