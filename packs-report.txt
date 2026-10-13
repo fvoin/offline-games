@@ -1,27 +1,29 @@
 blocks-c73e7ff7e958fa9d.bundle	2963998	gamekit
 bump-5ba986f89e0f4427.bundle	3705371	gamekit
-clash-0764c4dbac7b8510.bundle	8109542	gamekit
-doodle-8db4f21ff5d3e936.bundle	5240999	gamekit,omkit
+clash-6b6eae98d38f4ceb.bundle	8305590	gamekit
+doodle-7d38b567347474e3.bundle	5241656	gamekit,omkit
 drop-23bac5bf6cc5e329.bundle	1218788	gamekit
 gamekit-eea132b6f07c51cc.bundle	3675041	
 gobble-a23478c2468e278d.bundle	1916916	gamekit
 hockey-f6f984be6c1a4c09.bundle	1101884	gamekit
-hook-e2c146f2bba21d82.bundle	30425190	gamekit,omkit
+hook-d4ea92aba58357f5.bundle	30425229	gamekit,omkit
 hop-c89c7e9f791eaa73.bundle	4153809	gamekit
 merge-7dc3e7bef6c47d13.bundle	2584783	gamekit
 moto-e63f8468b6034c17.bundle	5081917	gamekit
 omkit-a615aab960938f2f.bundle	1958876	gamekit
 pin-4dc5cfa9d189d256.bundle	2418813	gamekit
-queens-3524d8660ca02243.bundle	519445	gamekit
+queens-5d17c12dd18479b0.bundle	627391	gamekit
 race-c825059c0dfe9dc0.bundle	12918715	gamekit
-rain-b7cfb45baa72a2ef.bundle	3654327	gamekit,omkit
-slide-a8a207502b0680ff.bundle	8500959	gamekit,omkit
-sort-c00672d8cefc30fa.bundle	12605276	gamekit
+rain-75ef2b9b70e2dda5.bundle	3654350	gamekit,omkit
+slide-97234dd50ceecd49.bundle	8500962	gamekit,omkit
+sort-d078751198aef904.bundle	12695579	gamekit
 squish-eac3932edb23ac1c.bundle	2595384	gamekit,omkit
 tenbox-9ff9521346a5ff8b.bundle	658744	gamekit
 tower-20bddd367a6618c1.bundle	2569171	gamekit
+note: atlas Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2 is also used by the shell: its texture is in the player and in bump+gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_fridge.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 note: atlas Assets/Game/Art/Atlases/atlas_hub.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
+note: atlas Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in doodle+gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in squish
 gamekit assets: 297
   gamekit Assets/Game/Art/Atlases/atlas_bump.spriteatlasv2
