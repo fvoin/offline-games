@@ -1,21 +1,22 @@
 blocks-c73e7ff7e958fa9d.bundle	2963998	gamekit
 bump-5ba986f89e0f4427.bundle	3705371	gamekit
 clash-6b6eae98d38f4ceb.bundle	8305590	gamekit
-doodle-7d38b567347474e3.bundle	5241656	gamekit,omkit
+doodle-e4db87e896432f43.bundle	5241655	gamekit,omkit
 drop-23bac5bf6cc5e329.bundle	1218788	gamekit
 gamekit-eea132b6f07c51cc.bundle	3675041	
 gobble-a23478c2468e278d.bundle	1916916	gamekit
 hockey-f6f984be6c1a4c09.bundle	1101884	gamekit
-hook-d4ea92aba58357f5.bundle	30425229	gamekit,omkit
+hook-1a7f1f929f608ce9.bundle	30425364	gamekit,omkit
 hop-c89c7e9f791eaa73.bundle	4153809	gamekit
 merge-7dc3e7bef6c47d13.bundle	2584783	gamekit
 moto-e63f8468b6034c17.bundle	5081917	gamekit
-omkit-a615aab960938f2f.bundle	1958876	gamekit
+omkit-ffa5df4badca9d33.bundle	1958744	gamekit
+paint-f9774a50f5db23b1.bundle	4263334	gamekit
 pin-4dc5cfa9d189d256.bundle	2418813	gamekit
 queens-5d17c12dd18479b0.bundle	627391	gamekit
 race-c825059c0dfe9dc0.bundle	12918715	gamekit
-rain-75ef2b9b70e2dda5.bundle	3654350	gamekit,omkit
-slide-97234dd50ceecd49.bundle	8500962	gamekit,omkit
+rain-a5197071fef6eb68.bundle	3654386	gamekit,omkit
+slide-e84a41eac988c0cd.bundle	8501055	gamekit,omkit
 sort-d078751198aef904.bundle	12695579	gamekit
 squish-eac3932edb23ac1c.bundle	2595384	gamekit,omkit
 tenbox-9ff9521346a5ff8b.bundle	658744	gamekit
@@ -401,6 +402,7 @@ omkit assets: 56
   copy of the shell in hop: Assets/Game/HubArt/covers/cover_hop_tall.png
   copy of the shell in merge: Assets/Game/HubArt/covers/cover_merge_tall.png
   copy of the shell in moto: Assets/Game/HubArt/covers/cover_moto_tall.png
+  copy of the shell in paint: Assets/Game/HubArt/covers/cover_paint_tall.png
   copy of the shell in pin: Assets/Game/HubArt/covers/cover_pin_tall.png
   copy of the shell in queens: Assets/Game/HubArt/covers/cover_queens_tall.png
   copy of the shell in race: Assets/Game/HubArt/covers/cover_race_tall.png
