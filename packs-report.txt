@@ -3,7 +3,7 @@ bump-b6c28dcff687157e.bundle	3439655	gamekit
 clash-adb91fb83eb4ee71.bundle	7242022	gamekit
 doodle-e27356f6d66420f6.bundle	1945278	gamekit,omkit
 drop-bcb5dc08bf725ea7.bundle	1044401	gamekit
-duel-ad1c8300b7983a44.bundle	6205545	gamekit
+duel-1648465c72280a74.bundle	6206278	gamekit
 gamekit-71974bdb4d5ef1e7.bundle	3533557	
 gobble-839a572061cc930d.bundle	3282585	gamekit
 hockey-173b9c222d2afbbf.bundle	1087399	gamekit
