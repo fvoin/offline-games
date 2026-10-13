@@ -59,12 +59,12 @@
         };
       })();
     </script>
-    <script src="Build/web-offline-games-20261014-all25.loader.js"></script>
+    <script src="Build/web-offline-games-20261014-all26.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // D-418: the test API (window.__omnom) exists only with ?dev in the address; the real build id is written here by the build post-process (Omnom.EditorTools.WebTemplateStamp)
       var DEV = /[?&]dev(&|=|$)/.test(location.search);
-      var BUILD_ID = "e3985f51f47a";
+      var BUILD_ID = "d3ac8fcde48c";
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
       // without the invalid call (removes "INVALID_ENUM: getInternalformatParameter" console warnings)
       (function () {
@@ -127,7 +127,7 @@
             if (done) return;
             done = true;
             // the loader script was fetched before the worker existed: pass it through the worker once, so that it is stored too
-            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261014-all25.loader.js").catch(function () {}); } catch (e) {}
+            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261014-all26.loader.js").catch(function () {}); } catch (e) {}
             resolve();
           }
           try {
@@ -143,9 +143,9 @@
       }
       startWorker().then(function () { return createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-offline-games-20261014-all25.data.unityweb",
-        frameworkUrl: "Build/web-offline-games-20261014-all25.framework.js.unityweb",
-        codeUrl: "Build/web-offline-games-20261014-all25.wasm.unityweb",
+        dataUrl: "Build/web-offline-games-20261014-all26.data.unityweb",
+        frameworkUrl: "Build/web-offline-games-20261014-all26.framework.js.unityweb",
+        codeUrl: "Build/web-offline-games-20261014-all26.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // D-383: a game pack (StreamingAssets/packs/<name>-<content hash>.bundle) never changes under its name: once downloaded it is read from the browser's cache
         // without asking the server, so a game entered once opens again without network; the data file is checked with the server as before
