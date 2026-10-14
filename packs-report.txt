@@ -13,13 +13,13 @@ merge-81f45031059b33af.bundle	2533546	gamekit
 moto-fda430032c1e581e.bundle	5428920	gamekit
 omkit-5c3fdaca393b127c.bundle	2152698	gamekit
 paint-31961aca47c80e5c.bundle	2039507	gamekit
-pin-7163a07c907e634f.bundle	3279709	gamekit
+pin-f2ea044dc83eabc8.bundle	3698845	gamekit
 queens-93859774beedb090.bundle	1540417	gamekit
 race-572ff332a285de1d.bundle	12575885	gamekit
 rain-605ff80a17fa6638.bundle	1941461	gamekit,omkit
 slide-7ad8936b5f2762bd.bundle	2096433	gamekit,omkit
 sort-4dee75b36d501642.bundle	12686327	gamekit
-spree-7a9bbbee786a1fc9.bundle	11088238	gamekit,omkit
+spree-55e3dc67857a8252.bundle	11088721	gamekit,omkit
 tenbox-a6580b81c7bc470e.bundle	762910	gamekit
 tower-7c1e50814c509097.bundle	1998661	gamekit
 note: atlas Assets/Game/Art/Atlases/atlas_shell_ui.spriteatlasv2 is also used by the shell: its texture is in the player and in doodle+gamekit
