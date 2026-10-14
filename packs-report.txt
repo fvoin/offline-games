@@ -1,4 +1,4 @@
-blocks-c1b0a76d6079f7e0.bundle	1119456	gamekit
+blocks-35cd14fca0fbf3c6.bundle	1119452	gamekit
 bump-fb3e0168b7fee5ec.bundle	3440776	gamekit
 clash-9be5f238bd866515.bundle	8538924	gamekit
 doodle-8a342f4dd2bc5e7b.bundle	1945409	gamekit,omkit
@@ -12,9 +12,9 @@ hop-162078f170f38ab1.bundle	5473689	gamekit
 merge-81f45031059b33af.bundle	2533546	gamekit
 moto-fda430032c1e581e.bundle	5428920	gamekit
 omkit-5c3fdaca393b127c.bundle	2152698	gamekit
-paint-09dcb93c6725045a.bundle	2039510	gamekit
-pin-1f5460de4d91647e.bundle	3279708	gamekit
-queens-6fa60ddce907ce26.bundle	1540413	gamekit
+paint-31961aca47c80e5c.bundle	2039507	gamekit
+pin-7163a07c907e634f.bundle	3279709	gamekit
+queens-93859774beedb090.bundle	1540417	gamekit
 race-572ff332a285de1d.bundle	12575885	gamekit
 rain-605ff80a17fa6638.bundle	1941461	gamekit,omkit
 slide-7ad8936b5f2762bd.bundle	2096433	gamekit,omkit
