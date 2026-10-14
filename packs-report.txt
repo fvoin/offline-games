@@ -14,9 +14,9 @@ moto-fda430032c1e581e.bundle	5428920	gamekit
 omkit-5c3fdaca393b127c.bundle	2152698	gamekit
 paint-1af2c0f910b76e12.bundle	2040918	gamekit
 pin-ad9351328c405803.bundle	3280021	gamekit
-queens-66c362a5a4d5b5f7.bundle	1541174	gamekit
-race-16506f7c37a90219.bundle	10978573	gamekit
-rain-6ae28cde269edd43.bundle	1941460	gamekit,omkit
+queens-69bcc284b6e3dd98.bundle	1540684	gamekit
+race-185a204ab978e77c.bundle	10927596	gamekit
+rain-605ff80a17fa6638.bundle	1941461	gamekit,omkit
 slide-7ad8936b5f2762bd.bundle	2096433	gamekit,omkit
 sort-3b90323b067c71c4.bundle	12686607	gamekit
 spree-a715e79c85c119e1.bundle	10593002	gamekit,omkit

@@ -78,18 +78,40 @@
     <script>
       // D-418 (QA-23 Q-9): the audio of the engine asks AudioContext.resume() every 400 ms from the start, and a page nobody has touched yet gets a Chrome warning each time.
       // Until the first touch / click / key the call does nothing and answers at once; the context is made as usual and starts with the first real gesture (the engine's own timer and listeners do the resume).
+      // D-527 (programmer-456): and back from another tab / app / a locked screen. The engine takes its listeners off once the context runs and its timer stops, so a context the browser suspended
+      // meanwhile (iOS Safari: "suspended" / "interrupted" after an app switch or a lock; Android Chrome and WebView after the tab was in the background) stayed mute for good. Every context the page makes is
+      // remembered; when the page is shown again (visibilitychange, pageshow, focus), when a context changes its state, and inside every touch / click / key (where iOS allows it) the ones that do not run are resumed.
       (function () {
         var AC = window.AudioContext || window.webkitAudioContext;
         if (!AC || !AC.prototype || typeof AC.prototype.resume !== "function") return;
-        var touched = false;
-        function mark() { touched = true; }
+        var touched = false, ctxs = [], retry = 0;
+        function allowed() { var ua = navigator.userActivation; return touched || !!(ua && ua.hasBeenActive); }
+        function wake() {
+          if (!allowed()) return;
+          for (var i = 0; i < ctxs.length; i++) {
+            var c = ctxs[i];
+            if (c.state === "running" || c.state === "closed") continue;
+            try { var p = c.resume(); if (p && p.catch) p.catch(function () { }); } catch (_) { }
+          }
+        }
+        function wakeSoon() { wake(); clearTimeout(retry); retry = setTimeout(wake, 400); setTimeout(wake, 1500); }
+        function mark() { touched = true; wake(); }
         ["pointerup", "touchend", "mouseup", "mousedown", "click", "keydown"].forEach(function (e) { window.addEventListener(e, mark, { capture: true, passive: true }); });
+        document.addEventListener("visibilitychange", function () { if (!document.hidden) wakeSoon(); });
+        window.addEventListener("pageshow", wakeSoon);
+        window.addEventListener("focus", wakeSoon);
         var resume = AC.prototype.resume;
         AC.prototype.resume = function () {
-          var ua = navigator.userActivation;
-          if (!touched && !(ua && ua.hasBeenActive)) return Promise.resolve();
+          if (!allowed()) return Promise.resolve();
           return resume.apply(this, arguments);
         };
+        function track(c) {
+          ctxs.push(c);
+          try { c.addEventListener("statechange", function () { if (c.state !== "running" && c.state !== "closed" && !document.hidden) setTimeout(wake, 250); }); } catch (_) { }
+        }
+        var Tracked = class extends AC { constructor() { super(...arguments); track(this); } };
+        if (window.AudioContext) window.AudioContext = Tracked;
+        if (window.webkitAudioContext) window.webkitAudioContext = Tracked;
       })();
     </script>
     <script>
@@ -112,12 +134,12 @@
         window.render(0);
       })();
     </script>
-    <script src="Build/web-offline-games-20261014-all39.loader.js"></script>
+    <script src="Build/web-offline-games-20261014-all40.loader.js"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // D-418: the test API (window.__omnom) exists only with ?dev in the address; the real build id is written here by the build post-process (Omnom.EditorTools.WebTemplateStamp)
       var DEV = /[?&]dev(&|=|$)/.test(location.search);
-      var BUILD_ID = "8ab2457118c6";
+      var BUILD_ID = "079b1d505d56";
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
       // without the invalid call (removes "INVALID_ENUM: getInternalformatParameter" console warnings)
       (function () {
@@ -175,7 +197,7 @@
             if (done) return;
             done = true;
             // the loader script was fetched before the worker existed: pass it through the worker once, so that it is stored too
-            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261014-all39.loader.js").catch(function () {}); } catch (e) {}
+            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261014-all40.loader.js").catch(function () {}); } catch (e) {}
             resolve();
           }
           try {
@@ -191,9 +213,9 @@
       }
       startWorker().then(function () { return createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-offline-games-20261014-all39.data.unityweb",
-        frameworkUrl: "Build/web-offline-games-20261014-all39.framework.js.unityweb",
-        codeUrl: "Build/web-offline-games-20261014-all39.wasm.unityweb",
+        dataUrl: "Build/web-offline-games-20261014-all40.data.unityweb",
+        frameworkUrl: "Build/web-offline-games-20261014-all40.framework.js.unityweb",
+        codeUrl: "Build/web-offline-games-20261014-all40.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // D-383: a game pack (StreamingAssets/packs/<name>-<content hash>.bundle) never changes under its name: once downloaded it is read from the browser's cache
         // without asking the server, so a game entered once opens again without network; the data file is checked with the server as before
