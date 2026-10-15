@@ -176,12 +176,12 @@
         window.render(0);
       })();
     </script>
-    <script src="Build/web-offline-games-20261015-all53.loader.js" onerror="window.__omnomLoaderMissing = true"></script>
+    <script src="Build/web-offline-games-20261015-all54.loader.js" onerror="window.__omnomLoaderMissing = true"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // D-418: the test API (window.__omnom) exists only with ?dev in the address; the real build id is written here by the build post-process (Omnom.EditorTools.WebTemplateStamp)
       var DEV = /[?&]dev(&|=|$)/.test(location.search);
-      var BUILD_ID = "d89e9ad75916";
+      var BUILD_ID = "57f300c07cf1";
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
       // without the invalid call (removes "INVALID_ENUM: getInternalformatParameter" console warnings)
       (function () {
@@ -264,7 +264,7 @@
             if (done) return;
             done = true;
             // the loader script was fetched before the worker existed: pass it through the worker once, so that it is stored too
-            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261015-all53.loader.js").catch(function () {}); } catch (e) {}
+            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261015-all54.loader.js").catch(function () {}); } catch (e) {}
             resolve();
           }
           try {
@@ -290,12 +290,12 @@
         }, 4000);
       })();
       startWorker().then(function () {
-        if (typeof createUnityInstance !== "function") throw new Error("Build/web-offline-games-20261015-all53.loader.js did not load");
+        if (typeof createUnityInstance !== "function") throw new Error("Build/web-offline-games-20261015-all54.loader.js did not load");
         return createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-offline-games-20261015-all53.data.unityweb",
-        frameworkUrl: "Build/web-offline-games-20261015-all53.framework.js.unityweb",
-        codeUrl: "Build/web-offline-games-20261015-all53.wasm.unityweb",
+        dataUrl: "Build/web-offline-games-20261015-all54.data.unityweb",
+        frameworkUrl: "Build/web-offline-games-20261015-all54.framework.js.unityweb",
+        codeUrl: "Build/web-offline-games-20261015-all54.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // D-383: a game pack (StreamingAssets/packs/<name>-<content hash>.bundle) never changes under its name: once downloaded it is read from the browser's cache
         // without asking the server, so a game entered once opens again without network; the data file is checked with the server as before
