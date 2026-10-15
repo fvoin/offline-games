@@ -59,9 +59,11 @@ self.addEventListener("fetch", (event) => {
 async function handle(request, url) {
   const cache = await caches.open(CACHE);
   if (isIndex(url)) {
-    // the page: the network first (a new build is seen at once), the cached one when there is no network
+    // the page: the network first (a new build is seen at once), the cached one when there is no network.
+    // D-587: "no-cache" = ask the server whether the page changed (a cheap 304 when it did not); a plain fetch would take the browser's HTTP-cached copy (GitHub Pages: max-age=600)
+    // and hand out the start page of the PREVIOUS build, whose Build/ files are already deleted
     try {
-      const res = await fetch(request);
+      const res = await fetch(new Request(request.url, { cache: "no-cache", credentials: "same-origin" }));
       if (res.ok && request.method === "GET") cache.put(INDEX, res.clone());
       return res;
     } catch (e) {

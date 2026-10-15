@@ -56,7 +56,7 @@
       #loader.near #om .joy { opacity: 1; }
       @keyframes bootpeek { 0%,100% { transform: translateY(8px); } 50% { transform: translateY(-4px); } }
       #loader #fail { display: none; position: absolute; left: 24px; right: 24px; top: 546px; text-align: center; font: 900 20px/1.3 NunitoBoot, system-ui, sans-serif; color: #26305C; }
-      #loader.fail #fail { display: block; }
+      #loader.fail #fail { display: block; cursor: pointer; }
       #loader.fail .pct, #loader.fail .spk { display: none; }
           </style>
   </head>
@@ -176,12 +176,12 @@
         window.render(0);
       })();
     </script>
-    <script src="Build/web-offline-games-20261015-all52.loader.js"></script>
+    <script src="Build/web-offline-games-20261015-all53.loader.js" onerror="window.__omnomLoaderMissing = true"></script>
     <script>
       var canvas = document.querySelector("#unity-canvas");
       // D-418: the test API (window.__omnom) exists only with ?dev in the address; the real build id is written here by the build post-process (Omnom.EditorTools.WebTemplateStamp)
       var DEV = /[?&]dev(&|=|$)/.test(location.search);
-      var BUILD_ID = "6242e028e993";
+      var BUILD_ID = "d89e9ad75916";
       // the engine asks WebGL2 for MSAA sample counts of SNORM formats, which WebGL2 never renders to: answer "none"
       // without the invalid call (removes "INVALID_ENUM: getInternalformatParameter" console warnings)
       (function () {
@@ -204,9 +204,33 @@
       window.addEventListener("resize", fitFrame);
       window.addEventListener("orientationchange", fitFrame);
       if (window.visualViewport) window.visualViewport.addEventListener("resize", fitFrame);
+      // D-587 (programmer-520): "Could not start the game" on a good connection came from a STALE start page. GitHub Pages serves index.html (and every Build/ file) with
+      // Cache-Control: max-age=600, and every publish gives the build files new names and deletes the old ones: a page opened from the 10-minute-old cache asks for files that are gone (404)
+      // and the engine never starts. One reload that goes around the cache fixes it (the browser then asks the server for the page): the first failure of a visit does exactly that,
+      // and only a second failure inside 90 s shows the message. The marker lives in the address (_r=<time>), so it needs no storage and a new address is a new cache entry.
+      var RELOAD_MARK = /[?&]_r=(\d+)/;
+      function reloadFresh(force) {
+        var m = RELOAD_MARK.exec(location.search), now = Date.now();
+        if (!force && m && now - Number(m[1]) < 90000) return false;       // this visit has been through a fresh reload already
+        var q = location.search.replace(/[?&]_r=\d+/g, "").replace(/^&/, "?");
+        q = (q ? q + "&" : "?") + "_r=" + now;
+        setTimeout(function () { try { location.replace(location.pathname + q + location.hash); } catch (e) { location.reload(); } }, force ? 0 : 1200);
+        return true;
+      }
+      function giveUp() {
+        loader.classList.add("fail");
+        load.hidden = true;
+      }
+      function failed(why) {
+        if (load.instanceReady || load.failing) return;
+        console.warn("start failed: " + (why && why.message ? why.message : why));
+        if (reloadFresh(false)) { load.failing = true; return; }           // loader keeps drawing "Loading…" for the moment the reload takes
+        console.error(why);
+        giveUp();
+      }
       // ---- loading screen (variant B): the jar follows onProgress of createUnityInstance (smoothed), the game says "ready" through OmnomLoader.jslib
       var loader = document.getElementById("loader");
-      var load = { target: 0, shown: 0, instanceReady: false, gameReady: false, hidden: false, last: 0, readyAt: 0 };
+      var load = { raw: 0, failing: false, target: 0, shown: 0, instanceReady: false, gameReady: false, hidden: false, last: 0, readyAt: 0 };
       window.__omnomLoader = load;
       window.omnomLoaderReady = function () { load.gameReady = true; };
       function paintLoader(now) {
@@ -235,11 +259,12 @@
       function startWorker() {
         return new Promise(function (resolve) {
           var done = false;
+          if (typeof createUnityInstance !== "function") { resolve(); return; }       // the loader file did not arrive (404 of a stale page): no worker for this page, the engine call below reports it
           function finish() {
             if (done) return;
             done = true;
             // the loader script was fetched before the worker existed: pass it through the worker once, so that it is stored too
-            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261015-all52.loader.js").catch(function () {}); } catch (e) {}
+            try { if (navigator.serviceWorker && navigator.serviceWorker.controller) fetch("Build/web-offline-games-20261015-all53.loader.js").catch(function () {}); } catch (e) {}
             resolve();
           }
           try {
@@ -253,11 +278,24 @@
           } catch (e) { resolve(); }
         });
       }
-      startWorker().then(function () { return createUnityInstance(canvas, {
+      // the stall watch: bytes of the download stopped for 40 s (a dead connection after a network switch looks exactly like this) -> the same one fresh reload; while the progress moves nothing is ever cut off
+      (function () {
+        var seen = -1, movedAt = Date.now(), tick = Date.now();
+        setInterval(function () {
+          var now = Date.now(), gap = now - tick; tick = now;
+          if (gap > 10000 || document.hidden) { movedAt = now; return; }   // the page was frozen / in the background: that time does not count
+          if (load.instanceReady || load.failing || load.hidden) return;
+          if (load.raw !== seen) { seen = load.raw; movedAt = now; return; }
+          if (load.raw < 0.9 && now - movedAt > 40000) failed("download stalled at " + Math.round(load.raw * 100) + "%");
+        }, 4000);
+      })();
+      startWorker().then(function () {
+        if (typeof createUnityInstance !== "function") throw new Error("Build/web-offline-games-20261015-all53.loader.js did not load");
+        return createUnityInstance(canvas, {
         arguments: [],
-        dataUrl: "Build/web-offline-games-20261015-all52.data.unityweb",
-        frameworkUrl: "Build/web-offline-games-20261015-all52.framework.js.unityweb",
-        codeUrl: "Build/web-offline-games-20261015-all52.wasm.unityweb",
+        dataUrl: "Build/web-offline-games-20261015-all53.data.unityweb",
+        frameworkUrl: "Build/web-offline-games-20261015-all53.framework.js.unityweb",
+        codeUrl: "Build/web-offline-games-20261015-all53.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         // D-383: a game pack (StreamingAssets/packs/<name>-<content hash>.bundle) never changes under its name: once downloaded it is read from the browser's cache
         // without asking the server, so a game entered once opens again without network; the data file is checked with the server as before
@@ -275,9 +313,11 @@
         productVersion: "0.1.0",
         devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
       }, function (progress) {
+        load.raw = progress;
         load.target = progress / 0.9;       // the engine reports 0..0.9 while loading and 1 when it starts
       }); }).then(function (unityInstance) {
         load.instanceReady = true;
+        try { if (RELOAD_MARK.test(location.search)) history.replaceState(null, "", location.pathname + location.search.replace(/[?&]_r=\d+/g, "").replace(/^&/, "?") + location.hash); } catch (e) { }
         fitFrame();
         // test API on the page (Omnom.Shell.WebProbe + Plugins/WebGL/OmnomProbe.jslib), synchronous; D-418: only with ?dev in the address
         // window.__omnomState is the state JSON: a getter, because an act (and the real clock) only says that the state has a new version; the JSON is built when it is read
@@ -296,11 +336,9 @@
           },
         };
         }
-      }).catch(function (message) {
-        console.error(message);
-        loader.classList.add("fail");
-        load.hidden = true;
-      });
+      }).catch(failed);
+      // the message is a button too: a tap is a reload that goes around the cache
+      document.getElementById("fail").addEventListener("click", function () { reloadFresh(true); });
     </script>
   </body>
 </html>
