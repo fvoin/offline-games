@@ -12,7 +12,7 @@ hop-162078f170f38ab1.bundle	5473689	gamekit
 merge-81f45031059b33af.bundle	2533546	gamekit
 moto-895597ab4e55b86a.bundle	5428920	gamekit
 omkit-5c3fdaca393b127c.bundle	2152698	gamekit
-paint-990d7875a0b5c9d0.bundle	2033871	gamekit
+paint-2fb56cb9c57eaab6.bundle	2035332	gamekit
 pin-b155bc46ca173071.bundle	3698614	gamekit
 queens-93859774beedb090.bundle	1540417	gamekit
 race-572ff332a285de1d.bundle	12575885	gamekit
